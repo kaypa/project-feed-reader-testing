@@ -60,11 +60,12 @@ $(function() {
         const feed = document.querySelector('.feed');
         const firstFeed = [];
         beforeEach(function(done) {
-          loadFeed(0);
-          Array.from(feed.children).forEach(function(entry) {
-            firstFeed.push(entry.innerText);
-          })
-          loadFeed(1, done);
+          loadFeed(0, function() {
+            Array.from(feed.children).forEach(function(entry) {
+              firstFeed.push(entry.innerText);
+            })
+            loadFeed(1, done);
+          });  
         });
 
         // Ensures that content actually changes when a new feed is loadFeed
