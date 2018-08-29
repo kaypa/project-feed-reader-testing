@@ -9,3 +9,7 @@ A project that is part of the Udacity's Grow with Google Scholarship. A web-base
 https://github.com/kaypa/project-feed-reader-testing.git`
 
 `cd project-feed-reader-testing`
+
+## Instruction
+
+1. Open 'index.html' file in browser
