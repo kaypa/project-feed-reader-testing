@@ -52,7 +52,7 @@ $(function() {
         // there is at least a single .entry element within the .feed container
         it('completes its work', function() {
           const feed = document.querySelector('.feed');
-          expect(feed.children.length > 0).toBe(true);
+          expect(feed.children.length).toBeGreaterThan(0);
         });
     });
 
