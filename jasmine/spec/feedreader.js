@@ -51,8 +51,8 @@ $(function() {
         // Ensures when the loadFeed function is called and completes its work,
         // there is at least a single .entry element within the .feed container
         it('completes its work', function() {
-          const feed = document.querySelector('.feed');
-          expect(feed.children.length).toBeGreaterThan(0);
+          const entries = document.querySelector('.feed').querySelectorAll('.entry');
+          expect(entries.length).toBeGreaterThan(0);
         });
     });
 
