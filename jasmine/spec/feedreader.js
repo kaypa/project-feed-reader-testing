@@ -59,13 +59,15 @@ $(function() {
     describe('New Feed Selection', function() {
         const feed = document.querySelector('.feed');
         const firstFeed = [];
+        const secondFeed = [];
         beforeEach(function(done) {
           loadFeed(0, function() {
-            Array.from(feed.children).forEach(function(entry) {
-              firstFeed.push(entry.innerText);
-            })
-            loadFeed(1, done);
-          });  
+            firstFeed = feed.html();
+            loadFeed(1, function() {
+              secondFeed = feed.html();
+              done();
+            });
+          });
         });
 
         // Ensures that content actually changes when a new feed is loadFeed
